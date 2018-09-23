@@ -1,0 +1,32 @@
+<div class="page">
+<?php
+	
+	
+	// Example fetch datas from database
+	
+	$productCount = 0;
+	while ($product = $this->dbResource_01->fetch ())
+	{
+		if ($productCount ++ === 0) { echo "<h1>Fetching directly data</h1>"; }
+		echo "<div class=\"product\"><b>{$product->id}</b>{$product->title}</div>";
+	}
+
+
+    // Or fetch data in "external" template
+
+    $data = $this->dbResource_01;
+	$data->resetResource ();        // seek back to the first row...
+	$this->loop ('/_shared/generate_HTML_TABLE.phtml', $data);
+
+
+	// display config data, or not
+
+    $config = $this->configInfo;
+    if (empty ($config)) echo "<div style='margin-top:20px;'><a href='/?details=1'>try this</a></div>";
+    else {
+        echo "<pre>";
+        print_r ($config);
+        echo "</pre>";
+    }
+?>
+</div>

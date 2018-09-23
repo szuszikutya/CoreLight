@@ -1,0 +1,27 @@
+<?php
+
+
+	// this will be the table header
+
+	if ($this->_index === 0) { echo "
+<table>
+	<tr><th colspan=\"2\"><h2>Table generator template</h2></th></tr>
+	<tr>
+	    <th>PID</th>
+		<th>TITLE</th>
+	</tr>";
+	}
+?>
+
+    <!-- this will be the data loop !-->
+	<tr>
+		<td><?=$this->id;?></td>
+		<td><?=$this->title?></td>
+	</tr>
+	
+<?php
+	
+	
+	// Closing table DOM after last row
+	
+	if ($this->_instance->Count == ($this->_index + 1)) echo "</table>";

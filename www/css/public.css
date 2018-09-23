@@ -1,0 +1,14 @@
+html, body, div, p, table, td , h1, h2, h3, h4, h5, ul, li, blockquote {padding:0; margin:0; font-weight:300;  font-family: "Gadugi", sans-serif, Arial, Verdana, "Trebuchet MS", sans; line-height:1em; font-size:10pt; color:#161514;}
+a:hover { text-decoration:none; color:#29A8DF; }
+
+div.content 		{ width:90%; margin:1em auto; }
+div.product			{ line-height:1.5em; }
+div.product > b 	{ display:inline-block; width:20px; font-weight:400; color:gray; text-align:right; margin-right:1em; }
+
+h1, h2 				{ font-size:14pt; color:black; font-weight:300; line-height:1.5em; margin-top:1em;}
+
+
+table             { margin-top:2em; background-color: lavender; border-collapse: collapse; border-spacing: 0px; }
+table td, table th { padding:5px 10px; }
+table th          { background-color:#161514; color:whitesmoke; font-weight:300; text-align: left;}
+table th > h2     { font-size:14pt; margin:0 auto; color:white; }
